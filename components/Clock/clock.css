@@ -1,0 +1,13 @@
+.timeClock {
+    font-size: 20vw;
+    font-weight: bold;
+
+}
+
+.dateClock {
+    font-size: 5vh;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
