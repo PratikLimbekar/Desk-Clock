@@ -1,9 +1,18 @@
 {
-    "name": "Desk Clock",
-    "description": "A smart desktop clock and personal assistant",
-    "start_url" : "/",
-    "display": "standalone",
-     "background_color": "#000000",
+  "name": "Desk Clock",
+  "short_name": "Desk Clock",
+  "description": "A smart desktop clock and personal assistant",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#000000",
   "theme_color": "#000000",
-  "orientation": "landscape"
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "/icons/a1.jpeg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
 }
