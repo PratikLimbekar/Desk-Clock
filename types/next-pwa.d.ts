@@ -1,3 +1,12 @@
+  interface BeforeInstallPromptEvent extends Event {
+    readonly platforms: string[];
+    readonly userChoice: Promise<{
+        outcome: "accepted" | "dismissed";
+        platform: string;
+    }>;
+    prompt(): Promise<void>;
+}
+
 declare module "next-pwa" {
   import type { NextConfig } from "next";
 
@@ -15,3 +24,4 @@ declare module "next-pwa" {
 
   export default withPWA;
 }
+
