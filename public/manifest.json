@@ -10,9 +10,14 @@
   "orientation": "landscape",
   "icons": [
     {
-      "src": "/icons/a1.jpeg",
+      "src": "/icons/a1.png",
       "sizes": "192x192",
-      "type": "image/jpeg"
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/a2.png",
+      "sizes": "512x512",
+      "type": "image/png"
     }
   ]
 }
