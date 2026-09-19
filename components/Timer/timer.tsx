@@ -35,6 +35,7 @@ export default function Timer() {
             {/* <div className="clockDiv">
                 <Clock></Clock>
             </div> */}
+            <div className="splitTimer">
             <div className="mainTimer">
                 {hours !== '00' ? `${hours}:` : ''}{minutes}:{seconds}
             </div>
@@ -71,6 +72,7 @@ export default function Timer() {
                 setTimer(0)}} className="controlButton">Reset</button>}
                 </div>
                 
+            </div>
             </div>
         </div>
     )
