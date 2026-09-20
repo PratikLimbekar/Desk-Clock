@@ -8,10 +8,10 @@ import Tasks from "@/components/Tasks/tasks";
 import StatusBar from "@/components/StatusBar/statusBar";
 import { AlarmProvider, useAlarm } from "@/context/AlarmContext";
 
-const screens = [Clock, Alarms, Timer, Weather, Tasks];
+const screens = [Alarms, Clock, Weather, Tasks, Timer];
 
 function HomeContent() {
-  const [currentScreen, setCurrentScreen] = useState(0);
+  const [currentScreen, setCurrentScreen] = useState(1);
   const { isRinging } = useAlarm();
 
   // If an alarm rings, automatically rotate to the Clock screen in the front
@@ -24,7 +24,7 @@ function HomeContent() {
   return (
     <main className="h-screen w-screen overflow-hidden flex flex-col bg-black text-white select-none">
       {/* Dynamic top bar for updates */}
-      <StatusBar />
+      {/* <StatusBar /> */}
 
       <div
         className="flex-1 w-full overflow-hidden relative"
