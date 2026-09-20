@@ -1,20 +1,15 @@
 'use client';
 import Clock from "@/components/Clock/clock";
 import Timer from "@/components/Timer/timer";
+import Weather from "@/components/Weather/weather";
 import { useState } from "react";
 
-const screens = [Clock, Timer];
+const screens = [Clock, Timer, Weather];
 
 export default function Home() {
   const [currentScreen, setCurrentScreen] = useState(0);
 
   return (
-    // <div className="mainClock">
-    //   <Clock></Clock>
-    // </div>
-    // <div>
-    //   <Timer></Timer>
-    // </div>
     <main className="h-screen w-screen overflow-hidden"
       onTouchStart={(e) => {
         const startX = e.touches[0].clientX;
