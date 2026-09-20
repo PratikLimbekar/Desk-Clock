@@ -30,6 +30,10 @@
 .mainTimer {
     font-size: 15vw;
     animation: timerAppear 0.8s ease-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
 }
 
 @keyframes timerAppear {
