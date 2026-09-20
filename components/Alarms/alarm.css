@@ -1,0 +1,331 @@
+.alarmsContainer {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1.5rem 1rem 1.5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.alarmsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #1f1f1f;
+    /* margin-bottom: 0.75rem; */
+}
+
+.alarmsHeaderTitle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.alarmsTestBtn {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    background: #18181b;
+    border: 1px solid #27272a;
+    color: #a1a1aa;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.alarmsTestBtn:hover {
+    background: #27272a;
+    color: #ffffff;
+    border-color: #3f3f46;
+}
+
+/* 2-column horizontal split for landscape smartphone */
+.alarmsLandscapeSplit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Left panel: Add Alarm Form */
+.alarmFormPanel {
+    background: #09090b;
+    border: 1px solid #18181b;
+    border-radius: 10px;
+    padding: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.formSectionTitle {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #71717a;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.timeInputWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.timeInput {
+    background: #121214;
+    border: 1px solid #27272a;
+    color: #ffffff;
+    font-size: 1.75rem;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 0.2rem 0.6rem;
+    width: 100%;
+    outline: none;
+    letter-spacing: 0.05em;
+    font-family: monospace;
+}
+
+.timeInput:focus {
+    border-color: #ffffff;
+}
+
+.repeatButtonsGroup {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 0.6rem;
+    flex-wrap: wrap;
+}
+
+.repeatChip {
+    background: #18181b;
+    border: 1px solid #27272a;
+    color: #a1a1aa;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-transform: capitalize;
+}
+
+.repeatChipActive {
+    background: #ffffff;
+    color: #000000;
+    font-weight: 600;
+    border-color: #ffffff;
+}
+
+.customDaysGroup {
+    display: flex;
+    gap: 0.25rem;
+    margin-bottom: 0.6rem;
+}
+
+.dayBtn {
+    flex: 1;
+    background: #18181b;
+    border: 1px solid #27272a;
+    color: #71717a;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0.35rem 0;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s ease;
+}
+
+.dayBtnSelected {
+    background: #3b82f6;
+    color: #ffffff;
+    border-color: #3b82f6;
+}
+
+.labelInputWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #121214;
+    border: 1px solid #27272a;
+    border-radius: 6px;
+    /* padding: 0.3rem 0.5rem; */
+    margin-bottom: 0.4rem;
+}
+
+.labelInput {
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    font-size: 0.8rem;
+    width: 100%;
+    outline: none;
+}
+
+.labelInput::placeholder {
+    color: #52525b;
+}
+
+.btnSaveAlarm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    background: #ffffff;
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.85rem;
+    border: none;
+    border-radius: 8px;
+    padding: 0.55rem;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btnSaveAlarm:hover, .btnSaveAlarm:active {
+    background: #e4e4e7;
+    transform: translateY(-1px);
+}
+
+/* Right panel: Alarms List */
+.alarmsListPanel {
+    background: #09090b;
+    border: 1px solid #18181b;
+    border-radius: 10px;
+    padding: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+.alarmCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.6rem 0.75rem;
+    background: #121214;
+    border: 1px solid #1f1f23;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.15s ease;
+}
+
+.alarmCardDisabled {
+    opacity: 0.45;
+}
+
+.alarmCardLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.alarmCardTime {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: monospace;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+
+.alarmCardDetails {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    color: #a1a1aa;
+}
+
+.alarmCardTag {
+    background: #1f1f23;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    text-transform: capitalize;
+}
+
+.alarmSnoozeTag {
+    background: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+}
+
+.alarmCardRight {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.iconToggleBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    transition: color 0.15s ease;
+}
+
+.iconToggleBtnOn {
+    color: #22c55e;
+}
+
+.iconToggleBtnOff {
+    color: #52525b;
+}
+
+.deleteAlarmBtn {
+    background: transparent;
+    border: none;
+    color: #71717a;
+    cursor: pointer;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    padding: 0.25rem;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+}
+
+.deleteAlarmBtn:hover {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.emptyAlarms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #52525b;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+}
