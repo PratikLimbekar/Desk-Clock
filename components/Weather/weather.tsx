@@ -24,7 +24,6 @@ export default function Weather() {
     useEffect(() => {
         async function getWeather() {
             const response = await fetch(`/api/weather?${params}`);
-            console.log(response);
             const datalol = await response.json();
             setData(datalol.current);
         }
@@ -49,11 +48,11 @@ export default function Weather() {
                 <img src={data?.condition.icon} />
 
                 <div className="temperature">
-                    {data?.temp_c}°
+                    {data?.temp_c}°C
                 </div>
 
                 <div className="feels">
-                    Feels like {data?.feelslike_c}°
+                    Feels like {data?.feelslike_c}°C
                 </div>
             </div>
             <div className="rightWeather">
