@@ -1,11 +1,12 @@
 'use client';
 import Clock from "@/components/Clock/clock";
+import Tasks from "@/components/Tasks/tasks";
 import Timer from "@/components/Timer/timer";
 import Weather from "@/components/Weather/weather";
 import { useState } from "react";
 
-//repeat the following screeens so as to not hjave that flying back animation
-const screens = [Clock, Timer, Weather];
+//repeat the following screeens so as to not have that flying back animation?
+const screens = [Clock, Timer, Weather, Tasks];
 
 export default function Home() {
   const [currentScreen, setCurrentScreen] = useState(0);
