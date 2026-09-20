@@ -1,5 +1,5 @@
 'use client';
-import '@/components/tasks/tasks.css';
+import '@/components/Tasks/tasks.css';
 import {MdDeleteOutline} from "react-icons/md";
 
 import { useState, useEffect } from "react";
