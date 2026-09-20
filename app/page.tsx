@@ -4,6 +4,7 @@ import Timer from "@/components/Timer/timer";
 import Weather from "@/components/Weather/weather";
 import { useState } from "react";
 
+//repeat the following screeens so as to not hjave that flying back animation
 const screens = [Clock, Timer, Weather];
 
 export default function Home() {
@@ -18,10 +19,10 @@ export default function Home() {
           const endX = event.changedTouches[0].clientX;
           const distance = endX - startX;
           if (distance < -50) {
-            setCurrentScreen((current) => Math.min(current + 1, screens.length - 1));
+            setCurrentScreen((current) => (current + 1)%screens.length);
           }
           if (distance > 50) {
-            setCurrentScreen((current) => Math.max(current - 1, 0));
+            setCurrentScreen((current) => (current - 1 + screens.length)%screens.length);
           }
           document.removeEventListener("touchend", handleTouchEnd);
         }
