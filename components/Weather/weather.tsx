@@ -6,6 +6,8 @@ type WeatherData = {
     temp_c: number;
     feelslike_c: number;
     humidity: number;
+    chance_of_rain: number;
+    will_it_rain: number;
     condition: {
         text: string;
         icon: string;
