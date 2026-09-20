@@ -22,5 +22,5 @@ export interface AlarmContextType {
     updateAlarm: (id: string, updates: Partial<Alarm>) => void;
     snoozeAlarm: () => void;
     stopAlarm: () => void;
-    testAlarm: () => void;
+    // testAlarm: () => void;
 }
