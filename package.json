@@ -7,7 +7,7 @@
     "build": "next build --webpack",
     "start": "next start",
     "lint": "eslint"
-  },
+  },  
   "dependencies": {
     "@supabase/supabase-js": "^2.116.0",
     "googleapis": "^181.0.0",
