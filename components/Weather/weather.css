@@ -1,0 +1,60 @@
+.weather {
+    background-color: black;
+    color: white;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.leftWeather, .rightWeather {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: blue; */
+    min-width: 50vw;
+    min-height: 80vh;
+}
+
+.rightWeather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    min-width: 50vw;
+    min-height: 80vh;
+
+    padding-left: 8vw;
+    box-sizing: border-box;
+
+    gap: 28px;
+
+    font-size: 1.15rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+
+    color: rgba(255, 255, 255, 0.75);
+
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.temperature {
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-weight: 200;
+    letter-spacing: -6px;
+
+    line-height: 1;
+
+    margin: 10px 0;
+}
+
+.feels {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.45);
+    letter-spacing: 1px;
+}
