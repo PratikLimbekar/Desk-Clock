@@ -8,7 +8,7 @@ import Tasks from "@/components/Tasks/tasks";
 import StatusBar from "@/components/StatusBar/statusBar";
 import { AlarmProvider, useAlarm } from "@/context/AlarmContext";
 
-const screens = [Alarms, Clock, Weather, Tasks, Timer];
+const screens = [Clock, Alarms, Weather, Tasks, Timer];
 
 function HomeContent() {
   const [currentScreen, setCurrentScreen] = useState(1);
@@ -23,8 +23,8 @@ function HomeContent() {
 
   return (
     <main className="h-screen w-screen overflow-hidden flex flex-col bg-black text-white select-none">
-      {/* Dynamic top bar for updates */}
-      {/* <StatusBar /> */}
+      
+      <StatusBar />
 
       <div
         className="flex-1 w-full overflow-hidden relative"

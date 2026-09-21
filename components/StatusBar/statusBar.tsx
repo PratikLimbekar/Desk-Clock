@@ -31,6 +31,12 @@ export default function StatusBar({ extraContent }: StatusBarProps) {
         hour12: false,
     });
 
+    const hasIdleContent = snoozedAlarm || nextAlarm || extraContent;
+
+    if (!isRinging && !hasIdleContent) {
+        return null;
+    }
+
     if (isRinging && ringingAlarm) {
         return (
             <div className="statusBarContainer statusBarRinging">
@@ -89,13 +95,6 @@ export default function StatusBar({ extraContent }: StatusBarProps) {
                 )}
                 {extraContent}
             </div>
-                {/* Idle Status Bar */}
-            {/* <div className="statusBarIdleRight">
-                <div className="flex items-center gap-2 text-xs text-neutral-500">
-                    <MdNotificationsActive size={14} />
-                    <span>{alarms.filter((a) => a.enabled).length} active</span>
-                </div>
-            </div> */}
         </div>
     );
 }
