@@ -1,3 +1,11 @@
+.mainClock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .timeClock {
     font-size: 20vw;
     font-weight: bold;
@@ -9,5 +17,5 @@
     font-weight: bold;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    
 }
