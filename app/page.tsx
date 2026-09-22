@@ -7,11 +7,12 @@ import Weather from "@/components/Weather/weather";
 import Tasks from "@/components/Tasks/tasks";
 import StatusBar from "@/components/StatusBar/statusBar";
 import { AlarmProvider, useAlarm } from "@/context/AlarmContext";
+import { TaskProvider } from "@/hooks/useTasks";
 
 const screens = [Clock, Alarms, Weather, Tasks, Timer];
 
 function HomeContent() {
-  const [currentScreen, setCurrentScreen] = useState(1);
+  const [currentScreen, setCurrentScreen] = useState(0);
   const { isRinging } = useAlarm();
 
   // If an alarm rings, automatically rotate to the Clock screen in the front
@@ -22,10 +23,8 @@ function HomeContent() {
   }, [isRinging]);
 
   return (
+    <TaskProvider>
     <main className="h-screen w-screen overflow-hidden flex flex-col bg-black text-white select-none">
-      
-      <StatusBar />
-
       <div
         className="flex-1 w-full overflow-hidden relative"
         onTouchStart={(e) => {
@@ -60,6 +59,7 @@ function HomeContent() {
         </div>
       </div>
     </main>
+    </TaskProvider>
   );
 }
 

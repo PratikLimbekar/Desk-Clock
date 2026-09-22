@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import TimeDisplay from "./timeDisplay";
 import DateDisplay from "./dateDisplay";
 import { useClock } from "@/hooks/useClock";
+import StatusBar from "@/components/StatusBar/statusBar";
 
 export default function Clock() {
     const date = useClock();
@@ -27,6 +28,7 @@ export default function Clock() {
 
     return (
         <div className="mainClock">
+            <StatusBar />
             <TimeDisplay time={date}></TimeDisplay>
             <DateDisplay date={date}></DateDisplay>
             {installPrompt && <button onClick={install}>Install app</button>}
