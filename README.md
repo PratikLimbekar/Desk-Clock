@@ -108,7 +108,7 @@ Before running the project, make sure you have:
 Create a `.env` file in the project root with the following variables:
 
 ```env
-SUPABASE_URL=your_supabase_project_url
+NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
 SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key
 
 WEATHER_API=your_weatherapi_key
@@ -120,7 +120,7 @@ GOOGLE_CLIENT_SECRET=your_google_oauth_client_secret
 
 ### Notes
 
-- `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` are used for the Google Tasks integration and refresh-token storage.
+- `NEXT_PUBLIC_SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` are used for the Google Tasks integration and refresh-token storage.
 - `WEATHER_API` is used by the weather API route to fetch current conditions.
 - `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, and `GOOGLE_REDIRECT_URI` enable the Google OAuth flow for Google Tasks access.
 

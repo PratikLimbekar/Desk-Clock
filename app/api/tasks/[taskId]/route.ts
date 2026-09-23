@@ -1,12 +1,12 @@
 import { google } from "googleapis";
 import { NextRequest, NextResponse } from "next/server";
-import { supabase } from "@/lib/supabase";
+import { supabaseAdmin } from "@/lib/supabase/admin";
 
 export async function PATCH(request: NextRequest, {params} : { params: Promise<{taskId: string}>}) {
     try {
         const { taskId} = await params;
         console.log("Here also task id: ", taskId);
-        const {data, error} = await supabase.from("users").select("google_refresh_token").limit(1).single();
+        const {data, error} = await supabaseAdmin.from("users").select("google_refresh_token").limit(1).single();
         if (error || !data?.google_refresh_token) {
             return NextResponse.json({error: "Google account not found in Supa"}, {status: 401});
         }
