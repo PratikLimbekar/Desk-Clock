@@ -21,9 +21,17 @@ export default function StatusBar({ extraContent }: StatusBarProps) {
         : null;
 
     // Check for next upcoming enabled alarm
+    const now = new Date();
+    const current = now.getHours() * 60 + now.getMinutes();
+
     const nextAlarm = alarms
         .filter((a) => a.enabled && (!a.snoozedUntil || a.snoozedUntil <= Date.now()))
-        .sort((a, b) => a.time.localeCompare(b.time))[0];
+        .sort((a, b) => a.time.localeCompare(b.time))
+        .find((a) => {
+            const [h, m] = a.time.split(":").map(Number);
+            const alarm = h * 60 + m;
+            return alarm > current && alarm - current <= 60;
+        });
 
 
     if (isRinging && ringingAlarm) {
